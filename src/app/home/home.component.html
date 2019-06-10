@@ -1,0 +1,33 @@
+<div class="jumbotron text-center">
+    <img src="assets/images/bee.png" style="width: 20%">
+  <h1 class="display-4">Пчелка | DeaBee</h1>
+    <hr class="my-4">
+    <!--<p>Пожалуйста, воспользуйтесь кнопкой ниже чтобы быстро загрузить информацию</p>
+
+  
+    <div class="input-group mb-3" *ngIf="!SUCCESS">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Загрузить</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="file" (change)="handleFileInput($event.target.files)">
+          <label class="custom-file-label" for="file">Выберите файл</label>
+        </div>
+      </div>
+    <div *ngIf="SUCCESS">
+      <p>Информация успешно загружена.</p>
+    </div>-->
+  </div>
+  
+  <button class="btn btn-default" (click)="login()" *ngIf="!claims">
+      Login
+  </button>
+  <button class="btn btn-default" (click)="logoff()" *ngIf="claims">
+      Logout
+  </button>
+  <button class="btn btn-default" (click)="callApi()" *ngIf="claims">Call Api</button>
+
+  <pre *ngIf="claims">
+      {{claims | json}}
+      {{apiData | json}}
+  </pre>

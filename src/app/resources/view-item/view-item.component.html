@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{resourceName}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- <mat-list>
+      <ng-container *ngFor="let field of fields">
+        <mat-list-item>
+          <div class="container">
+            <div class="row">
+              <div class="field-label col-md-auto">
+                  {{field.Label}}
+              </div>
+              <div class="field-val col-md-auto">
+                {{fieldValues[field.Name]}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+      </ng-container>
+    </mat-list> -->
+    <mat-list class="container">
+        <mat-list-item class="row justify-content-md-start" *ngFor="let field of fields">
+            <div class="col-md-4 field-label">
+                {{field.Label}}
+              </div>
+          <div class="col-md-auto">
+              {{fieldValues[field.Name]}}
+          </div>
+        </mat-list-item>
+      </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <ng-container *ngFor="let button of buttons">
+      <a color="primary" mat-raised-button routerLink="/{{button.DefaultValue}}">{{button.Label}}</a>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>

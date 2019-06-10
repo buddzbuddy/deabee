@@ -1,0 +1,20 @@
+{
+  "/engine-rest/*": {
+    "target": "http://localhost:8080/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/DynamicWebService/*": {
+    "target": "http://localhost/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api/identity/*": {
+    "target": "http://localhost:5001/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
